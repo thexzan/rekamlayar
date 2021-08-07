@@ -2,11 +2,47 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
+    <title>RekamLayar!</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="pico.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"> -->
+
+    <style>
+      video{
+        margin-top:-50px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script defer src="render.js"></script>
   </head>
   <body>
-    <h1>💖 Hello Woy!</h1>
-    <p>Welcome to your Electron application.</p>
+    <main class="container">
+      <hgroup>
+        <h2>Record your screen! 👀</h2>
+        <p class="secondary">Select source and record</p>
+      <hgroup>
+      <!-- <p>Welcome to your Electron application.</p> -->
+      <div class="grid">
+        <div>
+          <video width="100%"></video>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <button disabled id="startBtn">Record</button>
+        </div>
+        <div>
+          <button disabled id="stopBtn">Stop & Save</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <button id="videoSelectBtn">Select Source</button>
+        </div>
+      </div>
+
+    </main>
   </body>
 </html>
